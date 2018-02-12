@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'This is the build stage'
-		echo $root
+		echo root dir is $root
         }
         stage('Test') {
             steps {
