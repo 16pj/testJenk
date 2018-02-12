@@ -10,6 +10,7 @@ pipeline {
                 echo 'This is the build stage'
 		echo root dir is $root
         }
+	}
         stage('Test') {
             steps {
                 echo 'This is the test stage'
