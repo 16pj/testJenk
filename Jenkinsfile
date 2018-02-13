@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-	root='/home/robin/test/testJenk/myapp'
+	root='/home/mytestApp'
 	}
 
     stages {
