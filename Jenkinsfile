@@ -14,19 +14,19 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'This is the test stage';
-		cat ${root}/myfile
+		cat "${root}/myfile"
             }
         }
         stage('Finalize') {
             steps {
                 echo 'This is the packaging stage';
-		mv ${root}/myfile ${root}/myfile.txt
+		mv "${root}/myfile" "${root}/myfile.txt"
             }
         }
         stage('Deploy') {
             steps {
                 echo 'This is the publishing stage';
-		rm ${root}/myfile.txt
+		rm "${root}/myfile.txt"
             }
         }
     }
