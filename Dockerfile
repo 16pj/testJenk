@@ -1,7 +1,7 @@
-FROM ubuntu
+FROM debian
 MAINTAINER robin@robin.robin
 
-RUN apt update
-RUN apt install geany
+RUN apt-get update
+RUN apt-get install -y geany
 
 ENTRYPOINT /bin/bash

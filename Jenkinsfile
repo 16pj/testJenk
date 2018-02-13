@@ -23,14 +23,6 @@ pipeline {
                 sh 'ls /etc/jenkins'
             }
         }
-	stage('third') {
-
-	agent {dockerfile true}
-            steps {
-                sh 'which geany'
-            }
-        }
-
 
     }
 }
