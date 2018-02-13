@@ -5,7 +5,7 @@ pipeline {
         stage('first') {
 
        agent { dockerfile {
-		additionalBuildArgs '-t "robin:v1"'}
+		additionalBuildArgs '-t "tobin:v1"'}
 	}
 
             steps {
