@@ -16,7 +16,7 @@ pipeline {
 	stage('second') {
 
         agent { docker {
-            image 'ubuntu'
+            image 'cirros'
         }}
 
             steps {
