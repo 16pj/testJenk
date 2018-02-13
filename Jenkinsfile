@@ -5,8 +5,9 @@ pipeline {
         stage('first') {
 
        agent { dockerfile {
-		label:'mylabel'
-		additionalBuildArgs '-t "robin:v1"'}}
+		label 'mylabel'
+		additionalBuildArgs '-t "robin:v1"'}
+	}
 
             steps {
        sh 'which geany'
