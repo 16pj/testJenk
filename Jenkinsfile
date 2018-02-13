@@ -5,7 +5,6 @@ pipeline {
         stage('first') {
 
        agent { dockerfile {
-		label 'mylabel'
 		additionalBuildArgs '-t "robin:v1"'}
 	}
 
