@@ -1,15 +1,28 @@
 pipeline {
-    agent {
-        docker {
-            image 'maven:3-alpine'
-            args '-v $HOME/.m2:/root/.m2'
-        }
-    }
+    agent none
+
     stages {
-        stage('Build') {
+        stage('first') {
+
+        docker {
+            image 'debian'
+        }
+
             steps {
-                sh 'mvn -v'
+sh 'uname -a'
             }
         }
+
+	stage('second') {
+
+        docker {
+            image 'ubuntu'
+        }
+
+            steps {
+                sh 'uname -a'
+            }
+        }
+
     }
 }
