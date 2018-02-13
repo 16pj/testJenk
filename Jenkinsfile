@@ -1,6 +1,9 @@
 pipeline {
     agent any
-    def root='/home/mytestApp'
+
+    environment {
+	root='/home/mytestApp'
+	}
 
     stages {
         stage("Build") {
