@@ -4,25 +4,11 @@ pipeline {
     stages {
         stage('first') {
 
-       agent { docker {
-            image 'mysql'
-        }}
+       agent { dockerfile true}
 
             steps {
-       sh 'ls /etc/mysql'
+       sh 'which geany'
             }
         }
-
-	stage('second') {
-
-        agent { docker {
-            image 'jenkins'
-        }}
-
-            steps {
-                sh 'ls /etc/jenkins'
-            }
-        }
-
     }
 }
