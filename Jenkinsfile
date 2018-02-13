@@ -16,11 +16,11 @@ pipeline {
 	stage('second') {
 
         agent { docker {
-            image 'apache'
+            image 'jenkins'
         }}
 
             steps {
-                sh 'ls /etc/apache'
+                sh 'ls /etc/jenkins'
             }
         }
 	stage('third') {
