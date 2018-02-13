@@ -5,22 +5,22 @@ pipeline {
         stage('first') {
 
        agent { docker {
-            image 'debian'
+            image 'mysql'
         }}
 
             steps {
-       sh 'uname -a'
+       sh 'mysql -v'
             }
         }
 
 	stage('second') {
 
         agent { docker {
-            image 'cirros'
+            image 'apache'
         }}
 
             steps {
-                sh 'uname -a'
+                sh 'apache -v'
             }
         }
 
