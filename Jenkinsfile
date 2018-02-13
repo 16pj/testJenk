@@ -4,20 +4,20 @@ pipeline {
     stages {
         stage('first') {
 
-        docker {
+       agent { docker {
             image 'debian'
-        }
+        }}
 
             steps {
-sh 'uname -a'
+       sh 'uname -a'
             }
         }
 
 	stage('second') {
 
-        docker {
+        agent { docker {
             image 'ubuntu'
-        }
+        }}
 
             steps {
                 sh 'uname -a'
