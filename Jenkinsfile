@@ -26,7 +26,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'This is the publishing stage';
-		'rm ${root}/myfile.txt'
+		sh 'rm ${root}/myfile.txt'
             }
         }
     }
