@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'This is the build stage';
-		echo "something" > ${root}/myfile
+		sh 'echo something > ${root}/myfile'
         }
 	}
         stage('Test') {
