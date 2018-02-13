@@ -9,7 +9,7 @@ pipeline {
         }}
 
             steps {
-       sh 'mysql -v'
+       sh 'ls /etc/mysql'
             }
         }
 
@@ -20,9 +20,17 @@ pipeline {
         }}
 
             steps {
-                sh 'apache -v'
+                sh 'ls /etc/apache'
             }
         }
+	stage('third') {
+
+	agent {dockerfile true}
+            steps {
+                sh 'which geany'
+            }
+        }
+
 
     }
 }
