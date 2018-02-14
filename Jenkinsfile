@@ -1,16 +1,9 @@
-pipeline {
-    agent none
+node {
+    checkout scm
 
-    stages {
-        stage('first') {
+    def customImage = docker.build("my-image:${env.BUILD_ID}")
 
-       agent { dockerfile {
-		additionalBuildArgs '-t "tobin:v1"'}
-	}
-
-            steps {
-       sh 'which geany'
-            }
-        }
+    customImage.inside {
+        sh 'date "+%D|%H:%m"'
     }
 }
