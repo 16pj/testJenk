@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'This is the build stage'
+		cat 'usr/share/xml/fontconfig/'
         } }
         stage('Test') {
             steps {
