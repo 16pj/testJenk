@@ -16,7 +16,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'This is where the file is packaged'
-                sh "tar -cvzf robin.txt"
+                sh "tar -cvzf robin.tar.gz robin.txt"
             }
         }
     }
