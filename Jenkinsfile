@@ -14,9 +14,12 @@ pipeline {
             }
         }
         stage('Deploy') {
+            agent {
+        docker { image 'node:7-alpine' }
+    }
             steps {
-                echo 'This is where the file is packaged'
-                sh "tar -cvzf robin.tar.gz robin.txt"
+                echo 'This is where the docker command is run'
+                sh 'node --version'
             }
         }
     }
