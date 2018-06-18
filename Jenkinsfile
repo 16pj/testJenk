@@ -18,7 +18,7 @@ pipeline {
         docker { image 'node:7-alpine' }
     }
             steps {
-                echo 'This is where the docker command is run'
+                echo 'This is where the docker command is run.'
                 sh 'node --version'
             }
         }
